@@ -19,7 +19,7 @@ Part 3: Design and Implimantation of the Pick and Place Controller (**Under Deve
 |Part 1 Forward Kinematics | Google Colab Link|
 | ---                       | :---:                 |
 |1. Position Kinematics                        | [Open in Google Colab](https://colab.research.google.com/drive/1g35uhfY7_xWpHOWx1P-7ra2q78EAMfEj?usp=sharing)                   |
-|2. Manipulator Jacoian                        | [Open in Google Colab]([https://colab.research.google.com/drive/1g35uhfY7_xWpHOWx1P-7ra2q78EAMfEj?usp=sharing](https://colab.research.google.com/drive/1UusMWc5AYaRV8-5Zdo2Z9An0ylFIpavR?usp=sharing))                       |
+|2. Manipulator Jacoian                        | [Open in Google Colab]([https://colab.research.google.com/drive/1g35uhfY7_xWpHOWx1P-7ra2q78EAMfEj?usp=sharing](https://colab.research.google.com/drive/1UusMWc5AYaRV8-5Zdo2Z9An0ylFIpavR?usp=sharing)                       |
 
 
 <br>
