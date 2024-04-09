@@ -1,6 +1,6 @@
 # Design and Implementation of a Pick and Place Controller for the Kinova Gen 3 Arm
 
-## Created by ENME 501/502 Group 23
+## Created by University of Calgary ENME 501/502 Group 23
 
 This GitHub Repository contains a collection of all the work completed through the course of this project. This work is presented in a simple, in-depth, concise, and educational way through a set of Jupyter Notebook Tutorials. These tutorials will help allow robotic enthusiasts, students, and researchers interested in the robotics of object manipulation to gain an understanding of the robotics and mathematics behind it all. 
 
@@ -10,7 +10,7 @@ Part 1: Forwards Kinematics (Completed)
 
 Part 2: Inverse Kinematics (Completed)
 
-Part 3: Design and Implimantation of the Pick and Place Controller (Under Development)
+Part 3: Design and Implimantation of the Pick and Place Controller (Completed)
 <br>
 <br>
 |Part 1 Forward Kinematics | Google Colab Link|
@@ -30,10 +30,10 @@ Part 3: Design and Implimantation of the Pick and Place Controller (Under Develo
 
 |Part 3: Design and Implimentation of the Pick and Place Controller| Google Colab Link|
 | ---                                                              | :---:                 |
-|5. Implementation of Forward Kinematics to Kinova Gen 3 Robotic Arm                                                              | N/A                       |
+|5. Implementation of Forward Kinematics to the Kinova Gen 3 Robotic Arm                                                              | [Open in Google Colab](https://colab.research.google.com/drive/17js2GgHRx1Ob-h4o0waocMZa_N1NmjOX)                      |
 |6. Trust Constraint Method                   | [Open in Google Colab](https://colab.research.google.com/drive/1pJDImFs-ytFj88h5XOlPONxh1ScuNfLG#scrollTo=_bv8ODYZ4U52)                       |
-|7. Computer Vison Code                        | N/A                       |
-|8. Implementation of Inverse Kinematics to Kinova Gen 3 Robotic Arm                                                             | N/A                       |
+|7. Computer Vison Code                    | [Open in Google Colab](https://colab.research.google.com/drive/105GEpzdTqPD_siRIzO0QI_cWIa34ZFCE)                      |
+|8.Implementation of Inverse Kinematics to the Kinova Gen 3 Robotic Arm                                                              | [Open in Google Colab](https://colab.research.google.com/drive/18irPSeUh2W0wV8vZxzd21Yjus2K8gEmY)                      |
 
 
 ## Synopsis
@@ -42,20 +42,21 @@ This project contains extensive information regarding mathematical calculations,
 
 ### Part 1: Forward Kinematics
 The first part of this project was focused on the forward kinematics. Forward kinematics is the process in which known joint angles are input into a mathematical function which outputs the final position of the arm in the cartesian coordinate system. The forward kinematics section will cover the following topics: 
-1. [Forward and First Order Kinematics](https://github.com/LoiGeral/-UNOFFICIAL-ENME501-Kinova-Gen-3-Arm-Manipulation/blob/main/Part_1/1_Forward_and_First_Order_Kinematics.ipynb)
-2. [Manipulator Jacobian](https://github.com/LoiGeral/-UNOFFICIAL-ENME501-Kinova-Gen-3-Arm-Manipulation/blob/main/Part_1/2_Manipulator_Jacobian.ipynb)
+1. Position Kinematics
+2. Manipulator Jacobian
 
 ### Part 2: Inverse Kinematics
 The second part of this project looked at inverse kinematics. Inverse kinematics is the opposite of forward kinematics; it is when we provide a desired location in the cartesian coordinate system and, through the use of mathematical functions, are able to get the corresponding set of joint angles relating to that specific position. The inverse kinematics section will cover the following topics: 
-1. [Numerical Inverse Kinematics](https://github.com/LoiGeral/-UNOFFICIAL-ENME501-Kinova-Gen-3-Arm-Manipulation/tree/main/Part_2/Numerical_Inverse_Kinematics)
-2. [Resolved Rate Motion Control](https://github.com/LoiGeral/-UNOFFICIAL-ENME501-Kinova-Gen-3-Arm-Manipulation/blob/main/Part_2/Resolved_Rate_Motion_Control.ipynb)
+3. Resolved Rate Motion Control
+4. Numerical Inverse Kinematics
 
 
 ### Part 3: Design and Implementation of the Pick and Place Controller
 The final part of this project consisted of implementing the forward and inverse kinematics to allow the Kinova Gen 3 Robotic Arm to maneuver in such a way that it would be capable of picking up an object, manipulating said object, and placing this object in the desired location. This section will cover the following topics:
-1. Implementation of Forward Kinematics to Kinova Gen 3 Robotic Arm
-2. Implementation of Inverse Kinematics to Kinova Gen 3 Robotic Arm
-3. Computer Vision Code
+5. Implementation of Forward Kinematics to the Kinova Gen 3 Robotic Arm
+6. Trust Constraint Method
+7. Computer Vision Code
+8. Implementation of Inverse Kinematics to the Kinova Gen 3 Robotic Arm
 
 
 ## FAQ
