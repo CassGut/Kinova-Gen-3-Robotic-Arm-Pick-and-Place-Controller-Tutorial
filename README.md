@@ -30,10 +30,10 @@ Part 3: Design and Implimantation of the Pick and Place Controller (Under Develo
 
 |Part 3: Design and Implimentation of the Pick and Place Controller| Google Colab Link|
 | ---                                                              | :---:                 |
-|5. Implimentation of Forward Kinematics to Kinova Gen 3 Robotic Arm                                                              | N/A                       |
+|5. Implementation of Forward Kinematics to Kinova Gen 3 Robotic Arm                                                              | N/A                       |
 |6. Trust Constraint Method                   | [Open in Google Colab](https://colab.research.google.com/drive/1pJDImFs-ytFj88h5XOlPONxh1ScuNfLG#scrollTo=_bv8ODYZ4U52)                       |
-|7. Implimentation of Inverse Kinematics to Kinova Gen 3 Robotic Arm                    | N/A                       |
-|8. Computer Vison Code                                                                 | N/A                       |
+|7. Computer Vison Code                        | N/A                       |
+|8. Implementation of Inverse Kinematics to Kinova Gen 3 Robotic Arm                                                             | N/A                       |
 
 
 ## Synopsis
