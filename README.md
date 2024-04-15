@@ -30,10 +30,9 @@ Part 3: Design and Implimantation of the Pick and Place Controller (Completed)
 
 |Part 3: Design and Implimentation of the Pick and Place Controller| Google Colab Link|
 | ---                                                              | :---:                 |
-|5. Implementation of Forward Kinematics to the Kinova Gen 3 Robotic Arm                                                              | [Open in Google Colab](https://colab.research.google.com/drive/17js2GgHRx1Ob-h4o0waocMZa_N1NmjOX)                      |
-|6. Trust Constraint Method                   | [Open in Google Colab](https://colab.research.google.com/drive/1pJDImFs-ytFj88h5XOlPONxh1ScuNfLG#scrollTo=_bv8ODYZ4U52)                       |
-|7. Computer Vison Code                    | [Open in Google Colab](https://colab.research.google.com/drive/105GEpzdTqPD_siRIzO0QI_cWIa34ZFCE)                      |
-|8.Implementation of Inverse Kinematics to the Kinova Gen 3 Robotic Arm                                                              | [Open in Google Colab](https://colab.research.google.com/drive/18irPSeUh2W0wV8vZxzd21Yjus2K8gEmY)                      |
+|5. Trust Constraint Method                   | [Open in Google Colab](https://colab.research.google.com/drive/1pJDImFs-ytFj88h5XOlPONxh1ScuNfLG#scrollTo=_bv8ODYZ4U52)                       |
+|6. Computer Vison Code                    | [Open in Google Colab](https://colab.research.google.com/drive/105GEpzdTqPD_siRIzO0QI_cWIa34ZFCE)                      |
+|7.Kinova Gen 3 Robotic Arm Pick and Place Controller                                                             | [Open in Google Colab](https://colab.research.google.com/drive/18irPSeUh2W0wV8vZxzd21Yjus2K8gEmY)                      |
 
 
 ## Synopsis
