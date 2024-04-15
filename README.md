@@ -16,7 +16,7 @@ Part 3: Design and Implimantation of the Pick and Place Controller (Completed)
 |Part 1 Forward Kinematics | Google Colab Link|
 | ---                       | :---:                 |
 |1. Position Kinematics                        | [Open in Google Colab](https://colab.research.google.com/drive/1g35uhfY7_xWpHOWx1P-7ra2q78EAMfEj?usp=sharing)                   |
-|2. Manipulator Jacobian                        | [Open in Google Colab](https://colab.research.google.com/drive/1UusMWc5AYaRV8-5Zdo2Z9An0ylFIpavR?usp=sharing)                       |
+|2. Velocity Kinematics                      | [Open in Google Colab](https://colab.research.google.com/drive/1UusMWc5AYaRV8-5Zdo2Z9An0ylFIpavR?usp=sharing)                       |
 
 
 <br>
@@ -30,9 +30,9 @@ Part 3: Design and Implimantation of the Pick and Place Controller (Completed)
 
 |Part 3: Design and Implimentation of the Pick and Place Controller| Google Colab Link|
 | ---                                                              | :---:                 |
-|5. Trust Constraint Method                   | [Open in Google Colab](https://colab.research.google.com/drive/1pJDImFs-ytFj88h5XOlPONxh1ScuNfLG#scrollTo=_bv8ODYZ4U52)                       |
-|6. Computer Vison Code                    | [Open in Google Colab](https://colab.research.google.com/drive/105GEpzdTqPD_siRIzO0QI_cWIa34ZFCE)                      |
-|7.Kinova Gen 3 Robotic Arm Pick and Place Controller                                                             | [Open in Google Colab](https://colab.research.google.com/drive/18irPSeUh2W0wV8vZxzd21Yjus2K8gEmY)                      |
+|5. Trust-Region Constraint Method                   | [Open in Google Colab](https://colab.research.google.com/drive/1pJDImFs-ytFj88h5XOlPONxh1ScuNfLG#scrollTo=_bv8ODYZ4U52)                       |
+|6. Computer Vison Code                    | [Open in Google Colab](https://colab.research.google.com/drive/105GEpzdTqPD_siRIzO0QI_cWIa34ZFCE#scrollTo=JgZvMV2T1BLm)                      |
+|7. Kinova Gen 3 Robotic Arm Pick and Place Controller                                                             | [Open in Google Colab](https://colab.research.google.com/drive/17js2GgHRx1Ob-h4o0waocMZa_N1NmjOX#scrollTo=pKqHaWBx9Ogg)                      |
 
 
 ## Synopsis
@@ -42,7 +42,7 @@ This project contains extensive information regarding mathematical calculations,
 ### Part 1: Forward Kinematics
 The first part of this project was focused on the forward kinematics. Forward kinematics is the process in which known joint angles are input into a mathematical function which outputs the final position of the arm in the cartesian coordinate system. The forward kinematics section will cover the following topics: 
 1. Position Kinematics
-2. Manipulator Jacobian
+2. Velocity Kinematics
 
 ### Part 2: Inverse Kinematics
 The second part of this project looked at inverse kinematics. Inverse kinematics is the opposite of forward kinematics; it is when we provide a desired location in the cartesian coordinate system and, through the use of mathematical functions, are able to get the corresponding set of joint angles relating to that specific position. The inverse kinematics section will cover the following topics: 
@@ -55,7 +55,7 @@ The final part of this project consisted of implementing the forward and inverse
 5. Implementation of Forward Kinematics to the Kinova Gen 3 Robotic Arm
 6. Trust Constraint Method
 7. Computer Vision Code
-8. Implementation of Inverse Kinematics to the Kinova Gen 3 Robotic Arm
+8. Implementation of Inverse Kinematics to the Kinova Gen 3 Robotic Arm (*this notebook contains instructions to run the pick and place code*)
 
 
 ## FAQ
