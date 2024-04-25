@@ -1,3 +1,5 @@
+# this file is used to find the instrinsic camera parameters in the form a camera matrix 
+# line 19 needs to be changed to where the calibration pictures are saved 
 import numpy as np
 import cv2 as cv
 import glob

@@ -1,5 +1,6 @@
+# this function inputs a rotation matrix and returns the euler angle repersentation of that roation matrix 
+# used in the inverse kinematic calculations 
 import numpy as np
-#from isdiag import isdiag
 
 def alpha(M):
 

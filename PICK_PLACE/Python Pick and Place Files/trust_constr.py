@@ -1,8 +1,13 @@
+# Trust Constraint method used for inverse kinematics calculation
+# uncomment line 89 to 93 and 104 to 106 to run sperately, recomment to run the stats file  
+# inputs are initial angles guess and desired transformation matrix
+# outputs the converged angles for the desired transformation matrix 
 import numpy as np
 from scipy.optimize import minimize
 from Rx import Rx
 from Rz import Rz
 from fk import fk
+from pose_guess import pose_guess
 from QuadraticError import QuadraticError
 from angle_guess import angle_guess
 from T import T
@@ -81,22 +86,22 @@ def trust_constr(initial_guess, Tt, iterations):
 
     # Display results
     if result.success:
-        print("Optimization successful.")
-        print("Number of iterations:", result.nit)
-        print("Optimal Joint Angles:", np.rad2deg(result.x))
-        print("Optimal Desired Matrix:")
-        print(fk(result.x))
+        # print("Optimization successful.")
+        # print("Number of iterations:", result.nit)
+        # print("Optimal Joint Angles:", np.rad2deg(result.x))
+        # print("Optimal Desired Matrix:")
+        # print(fk(result.x))
+        print(f'Trust-Constr method converged in {result.nit} iterations.')
         converged = 1
     else:
         print("Optimization did not converge.")
+        result.nit = []
+        result.x = []
         converged = 0
 
     return converged, np.rad2deg(result.x), result.nit
 
-# T1 = np.array([[0, 1, 0,  0.1],
-#                    [1, 0, 0,  0.35],
-#                    [0, 0, -1,  0.4],
-#                    [0,  0,  0,  1]])
+# T1 = pose_guess()
 # q1 = angle_guess()
 # angles2 = trust_constr(q1,T1)
 

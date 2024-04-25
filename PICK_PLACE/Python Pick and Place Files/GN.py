@@ -1,3 +1,7 @@
+# Gauss Newton method used for inverse kinematics calculation
+# uncomment line 62 to 79 and 86 to 88 to run sperately, recomment to run the stats file
+# inputs are initial angles guess, desired transformation matrix and max iterations 
+# outputs the converged angles for the desired transformation matrix 
 import numpy as np
 from QuadraticError import QuadraticError
 from fk import fk
@@ -66,7 +70,7 @@ def GN(q_initial, target_pose, max_iterations):
         # print('Converged Position and Orientation using GN (degrees):')
         # B = np.round(fk(q), decimals=4)
         # print(B)
-        iteration = np.arange(1, len(error_GN) + 1)
+        # iteration = np.arange(1, len(error_GN) + 1)
         # plt.plot(iteration, error_GN, label='GN')
         # plt.xlabel('Iterations')
         # plt.ylabel('Error')
@@ -75,8 +79,10 @@ def GN(q_initial, target_pose, max_iterations):
         # plt.show()
     else:
         print('Did not Converge')
+        iteration = []
+        q = []
     return converged, q, iteration
 
 # angles1= angle_guess()
 # T1 = pose_guess()
-# q=GN(angles1,T1,200)
+# converged, q, iteration =GN(angles1,T1,200)

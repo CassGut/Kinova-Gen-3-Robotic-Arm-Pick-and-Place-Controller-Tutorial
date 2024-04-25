@@ -1,3 +1,7 @@
+# Newton Raphson method used for inverse kinematics calculation
+# uncomment line 62 to 79 and 84 to 87 to run sperately, recomment to run the stats file
+# inputs are initial angles guess, desired transformation matrix and max iterations 
+# outputs the converged angles for the desired transformation matrix 
 import numpy as np
 from QuadraticError import QuadraticError
 from fk import fk
@@ -66,7 +70,7 @@ def NR(q_initial, target_pose, max_iterations):
         # print('Converged Position and Orientation using NR (degrees):')
         # B = np.round(fk(q), decimals=4)
         # print(B)
-        iteration = np.arange(1, len(error_NR) + 1)
+        # iteration = np.arange(1, len(error_NR) + 1)
         # plt.plot(iteration, error_NR, label='NR')
         # plt.xlabel('Iterations')
         # plt.ylabel('Error')
@@ -79,4 +83,5 @@ def NR(q_initial, target_pose, max_iterations):
 
 # angles1= angle_guess()
 # T1 = pose_guess()
-# q=NR(angles1,T1,100)
+# covergence, angles, i =NR(angles1,T1,100)
+# print(i)

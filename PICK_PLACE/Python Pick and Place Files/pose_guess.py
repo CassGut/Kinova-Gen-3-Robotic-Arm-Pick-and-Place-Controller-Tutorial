@@ -1,3 +1,6 @@
+# this file randomly guesses a pose as a transformation matrix 
+# the orienation is not random, only a random guess between 8 selected poses which are the most viable when picking up cubes
+# the x y and z are random within the robots reach limitations 
 import random
 import numpy as np
 

@@ -1,3 +1,4 @@
+# this file is used to generate aruco markers which then put on the cubes 
 import cv2
 import cv2.aruco as aruco
 import numpy as np

@@ -1,3 +1,4 @@
+# this function inputs a rotation angle around the z axis and returns the rotation matrix
 import numpy as np
 
 def Rz(theta):

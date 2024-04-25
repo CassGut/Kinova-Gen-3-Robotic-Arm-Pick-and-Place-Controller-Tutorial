@@ -1,3 +1,4 @@
+# checks to see if a matrix is diagnoal
 import numpy as np
 def is_diagonal(matrix):
     # Check if the matrix is square

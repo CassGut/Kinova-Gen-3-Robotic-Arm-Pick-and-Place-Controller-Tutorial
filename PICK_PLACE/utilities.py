@@ -1,3 +1,5 @@
+# this is the utilties functions it establishes device connection and manages function calls
+# lines 12 to 14 need to have the correct IP address and login information for the robot 
 import argparse
 
 from kortex_api.TCPTransport import TCPTransport

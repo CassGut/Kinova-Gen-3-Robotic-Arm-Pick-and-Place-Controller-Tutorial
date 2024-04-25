@@ -1,3 +1,7 @@
+# this file compares the stats of all the inverse kinematics method comparing 
+# Average Iterations, Median Iterations, Non-convergence Count and Non-convergence Percentage
+# change line 22 (the trials number) this will change the number of times each method is run
+# the higher the trials number the more time it will take but the more accurate the results 
 import numpy as np
 import matplotlib.pyplot as plt
 from collections import defaultdict
@@ -15,7 +19,7 @@ pd.set_option('display.max_columns', None)  # Show all columns
 pd.set_option('display.width', 1000)        # Avoid wrapping to the next line
 pd.set_option('display.max_rows', None)     # Show all rows
 
-def run_experiment(method, method_name, trials=20, **kwargs): ##  trials value can changed 
+def run_experiment(method, method_name, trials=250, **kwargs): ##  trials value can changed 
     iteration = []
     non_converge_count = 0
     
@@ -23,15 +27,17 @@ def run_experiment(method, method_name, trials=20, **kwargs): ##  trials value c
         angles = angle_guess()
         target = pose_guess()
         converged, q_final, iterations = method(angles, target, 150, **kwargs)
+        # print(f"Trial Result: {converged}, Iterations: {iterations}, Type of iterations: {type(iterations)}")  # Debug print
         if converged:
-            iteration_count = iterations
-            iteration.append(iteration_count)
-
+            if isinstance(iterations, int):
+                iteration.append(iterations)
+            # else:
+            #     print(f"Warning: Expected int but got {type(iterations)}")  # Handle unexpected data types
         else:
             non_converge_count += 1
     
-    avg_iterations = np.mean(iteration) if iteration else 0
-    median_iterations = median(iteration) if iteration else 0
+    avg_iterations = np.mean(iteration) # if iteration else 0
+    median_iterations = median(iteration) # if iteration else 0
     non_converge_percentage = (non_converge_count / trials) * 100
     
     # Plotting
@@ -54,14 +60,14 @@ def run_experiment(method, method_name, trials=20, **kwargs): ##  trials value c
 # Assuming you've defined or imported your methods correctly, here's how you could structure your main experiment loop:
 results = []
 methods = [
-    # {'method': NR, 'name': 'NR', 'kwargs': {}},
-    # {'method': GN, 'name': 'GN', 'kwargs': {}},
-    # {'method': WM, 'name': 'WM_0.0001', 'kwargs': {'lm': 0.0001}}, ## value can changed 
-    # {'method': WM, 'name': 'WM_1e-6', 'kwargs': {'lm': 1e-6}}, ## value can changed 
-    # {'method': CM, 'name': 'CM_1', 'kwargs': {'lm': 1}}, ## value can changed 
-    # {'method': CM, 'name': 'CM_0.1', 'kwargs': {'lm': 0.1}}, ## value can changed 
-    # {'method': SM, 'name': 'SM_0.028773368', 'kwargs': {'lm': 0.028773368}},
-    # {'method': SM, 'name': 'SM_0.000287734', 'kwargs': {'lm': 0.000287734}},
+    {'method': NR, 'name': 'NR', 'kwargs': {}},
+    {'method': GN, 'name': 'GN', 'kwargs': {}},
+    {'method': WM, 'name': 'WM_0.0001', 'kwargs': {'lm': 0.0001}}, ## value can changed 
+    {'method': WM, 'name': 'WM_1e-6', 'kwargs': {'lm': 1e-6}}, ## value can changed 
+    {'method': CM, 'name': 'CM_1', 'kwargs': {'lm': 1}}, ## value can changed 
+    {'method': CM, 'name': 'CM_0.1', 'kwargs': {'lm': 0.1}}, ## value can changed 
+    {'method': SM, 'name': 'SM_0.028773368', 'kwargs': {'lm': 0.028773368}},
+    {'method': SM, 'name': 'SM_0.000287734', 'kwargs': {'lm': 0.000287734}},
     {'method': trust_constr, 'name': 'trust_constr', 'kwargs': {}},
 ]
 

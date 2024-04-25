@@ -1,3 +1,4 @@
+# this function inputs a rotation matrix matrix and returns the euler vector form 
 import numpy as np
 
 def rot2eul_zyx(R):

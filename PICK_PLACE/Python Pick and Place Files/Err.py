@@ -1,3 +1,4 @@
+# this is the error calcution file it inputs 2 tranformation matrices and output the error between them as a 6 by 1 vector
 import numpy as np
 from alpha import alpha
 from fk import fk

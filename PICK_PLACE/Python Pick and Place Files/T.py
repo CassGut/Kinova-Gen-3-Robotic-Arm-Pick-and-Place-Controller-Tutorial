@@ -1,3 +1,4 @@
+# translation matrix, inputs x, y and z and returns the translation matrix 
 import numpy as np
 
 def T(dx, dy, dz):

@@ -1,3 +1,5 @@
+# this function calculates the Jacobian of any pose 
+# inputs joint angles that repersent pose and outputs the jacobian matrix
 import numpy as np
 from T import T 
 from Rx import Rx

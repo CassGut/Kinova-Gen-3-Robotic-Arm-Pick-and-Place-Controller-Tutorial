@@ -1,3 +1,4 @@
+# this file gets the current pose and angles of the robot 
 import sys
 import os
 import numpy as np
@@ -32,30 +33,6 @@ def rot2eul_zyx(R):
     # Convert to degrees if needed
     return np.degrees([x, y, z])
 
-# def get_angles_pose(base):
-#     # Current arm's joint angles (in home position)
-#     try:
-#         print("Getting Angles for every joint...")
-#         input_joint_angles = base.GetMeasuredJointAngles()
-#     except KServerException as ex:
-#         print("Unable to get joint angles")
-#         print("Error_code:{} , Sub_error_code:{} ".format(ex.get_error_code(), ex.get_error_sub_code()))
-#         print("Caught expected error: {}".format(ex))
-#         return False
-#     # Computing Foward Kinematics (Angle -> cartesian convert) from arm's current joint angles
-#     try:
-#         print(f"Computing Foward Kinematics using joint angles...")
-#         pose = base.ComputeForwardKinematics(input_joint_angles)    
-        
-#     except KServerException as ex:
-#         print("Unable to compute forward kinematics")
-#         print("Error_code:{} , Sub_error_code:{} ".format(ex.get_error_code(), ex.get_error_sub_code()))
-#         print("Caught expected error: {}".format(ex))
-#         return False
-
-#     joint_angles_array = [joint_angle.value for joint_angle in input_joint_angles.joint_angles]
-    
-#     return joint_angles_array, pose
 
 def get_angles_pose(base):
     while True:
@@ -101,11 +78,7 @@ def main():
         # Example core
         print(get_angles_pose(base))
         print(base.GetMeasuredCartesianPose())
-#         Rotation matrix:
-# [ 1.000000  0.000000  0.000000
-#   0.000000  1.000000  0.000000
-#   0.000000  0.000000  1.000000]
-# Translation vector: [-0.027060 -0.009970 -0.004706]
+
 
 if __name__ == "__main__":
     exit(main())

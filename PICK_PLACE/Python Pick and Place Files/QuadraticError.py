@@ -1,3 +1,5 @@
+# this function inputs 2 transformation matrices and returns mean square error between them 
+# line 7 is the weights for each value in the error vector ( see tutorial)
 import numpy as np
 from Err import Err
 

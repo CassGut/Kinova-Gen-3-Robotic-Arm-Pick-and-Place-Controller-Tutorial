@@ -1,3 +1,4 @@
+# these functions input initial angles and final angles and return the shortest distance between them while imposing joint limitations  
 import numpy as np
 import math
 

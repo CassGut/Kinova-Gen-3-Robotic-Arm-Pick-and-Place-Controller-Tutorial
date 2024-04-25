@@ -1,3 +1,5 @@
+# this is the complete pick and place controller file, 
+# make sure all the vision_sensor_focus_action_filepath lines have the correct path to the focus350 file
 import multiprocessing
 import subprocess
 import cv2

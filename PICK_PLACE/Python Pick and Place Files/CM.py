@@ -1,7 +1,10 @@
+# Chans method used for inverse kinematics calculation
+# uncomment line 68 to 85 and 94 to 96 to run sperately, recomment to run the stats file  
+# inputs are initial angles guess, desired transformation matrix, max iterations and lamda value(see tutorial)
+# outputs the converged angles for the desired transformation matrix 
 import numpy as np
 from QuadraticError import QuadraticError
 from fk import fk
-from J6 import J6
 from Err import Err
 from pose_guess import pose_guess
 from J import J
@@ -11,8 +14,6 @@ import matplotlib.pyplot as plt
 def CM(q_initial, target_pose, max_iterations, lm):
     # Initialize joint angles
     q = np.deg2rad(q_initial)
-    # q = np.delete(q, 2) # delete 3rd joint
-    #q = np.delete(q, 6)  # delete 7th joint
     q = np.array(q)
     error_CM = []
     we = np.array([1, 1, 1, 1, 1, 1])
@@ -84,6 +85,8 @@ def CM(q_initial, target_pose, max_iterations, lm):
         # plt.show()
     else:
         print('Did not Converge')
+        iteration = []
+        q = []
     return converged, np.rad2deg(q), iteration
 
     

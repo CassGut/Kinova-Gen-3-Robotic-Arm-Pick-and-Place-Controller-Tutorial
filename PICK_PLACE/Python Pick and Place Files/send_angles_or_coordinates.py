@@ -1,17 +1,9 @@
-#! /usr/bin/env python3
-
-###
-# KINOVA (R) KORTEX (TM)
-#
-# Copyright (c) 2018 Kinova inc. All rights reserved.
-#
-# This software may be modified and distributed
-# under the terms of the BSD 3-Clause license.
-#
-# Refer to the LICENSE file for details.
-#
-###
-
+# this fucntion send angles or cartesian vectors to the robot and exceutes the movement
+# cartesian_action_movement (change the vectors in the function definition) this will send the robot to the set coordinates
+# angular_action_movement (set the angles inside the function definition) this will send the robot to the set joint angles
+# move (set the delta vectors in the function call) the order is x y and z this will change the coordinates of the robot by values of xyz while keeping the orienation the same
+# remember that you are not controlling trajectory given movemnt will automatically have a staright line trajectory 
+# the robot might stall if the stright line trajectory is not possible 
 import sys
 import os
 import time
@@ -22,7 +14,6 @@ from kortex_api.autogen.client_stubs.BaseClientRpc import BaseClient
 from kortex_api.autogen.client_stubs.BaseCyclicClientRpc import BaseCyclicClient
 from kortex_api.Exceptions.KServerException import KServerException
 from kortex_api.autogen.messages import Base_pb2, BaseCyclic_pb2, Common_pb2
-from q_initial_guess import q_initial_guess
 
 # Maximum allowed waiting time during actions (in seconds)
 TIMEOUT_DURATION = 30
@@ -79,7 +70,7 @@ def example_move_to_home_position(base):
         print("Timeout on action notification wait")
     return finished
 
-def example_angular_action_movement(base,angle_values):
+def angular_action_movement(base,angle_values):
     
     print("Starting angular action movement ...")
     action = Base_pb2.Action()
@@ -116,7 +107,7 @@ def example_angular_action_movement(base,angle_values):
     return finished
 
 
-def cartesian_action_movement(base, base_cyclic, pose, x, y, z):
+def move(base, base_cyclic, pose, x, y, z):
     
     print("Starting Cartesian action movement ...")
     action = Base_pb2.Action()
@@ -152,7 +143,7 @@ def cartesian_action_movement(base, base_cyclic, pose, x, y, z):
         print("Timeout on action notification wait")
     return finished
 
-def example_cartesian_action_movement(base, base_cyclic):
+def cartesian_action_movement(base, base_cyclic):
     
     print("Starting Cartesian action movement ...")
     action = Base_pb2.Action()
@@ -167,12 +158,6 @@ def example_cartesian_action_movement(base, base_cyclic):
     cartesian_pose.theta_x =  180
     cartesian_pose.theta_y = 0
     cartesian_pose.theta_z = 90
-# x: 0.35690534114837646
-# y: -0.22816400229930878
-# z: 0.4503248333930969
-# theta_x: -0.2910321056842804
-# theta_y: -179.95693969726562
-# theta_z: 147.1464080810547
 
     e = threading.Event()
     notification_handle = base.OnNotificationActionTopic(
@@ -193,46 +178,6 @@ def example_cartesian_action_movement(base, base_cyclic):
         print("Timeout on action notification wait")
     return finished
 
-def example_cartesian_action_movement1(base, base_cyclic):
-    
-    print("Starting Cartesian action movement ...")
-    action = Base_pb2.Action()
-    action.name = "Example Cartesian action movement"
-    action.application_data = ""
-    feedback = base_cyclic.RefreshFeedback()
-
-    cartesian_pose = action.reach_pose.target_pose
-    cartesian_pose.x = 0.35
-    cartesian_pose.y = 0
-    cartesian_pose.z = 0.35
-    cartesian_pose.theta_x =  180
-    cartesian_pose.theta_y = 0
-    cartesian_pose.theta_z = 90
-# x: 0.35690534114837646
-# y: -0.22816400229930878
-# z: 0.4503248333930969
-# theta_x: -0.2910321056842804
-# theta_y: -179.95693969726562
-# theta_z: 147.1464080810547
-
-    e = threading.Event()
-    notification_handle = base.OnNotificationActionTopic(
-        check_for_end_or_abort(e),
-        Base_pb2.NotificationOptions()
-    )
-
-    print("Executing action")
-    base.ExecuteAction(action)
-
-    print("Waiting for movement to finish ...")
-    finished = e.wait(TIMEOUT_DURATION)
-    base.Unsubscribe(notification_handle)
-
-    if finished:
-        print("Cartesian movement completed")
-    else:
-        print("Timeout on action notification wait")
-    return finished
 
 class JointAngle:
     def __init__(self, joint_identifier, value):
@@ -259,23 +204,19 @@ def main():
         # Create required services
         base = BaseClient(router)
         base_cyclic = BaseCyclicClient(router)
-        #angle_values = example_inverse_kinematics_custom_pose(base, T, q)
         q = [ 180, 0, 0, -45, 0, -120.3, 90]
         
         # Example core
         success = True
 
         success &= example_move_to_home_position(base)
-        success &= example_cartesian_action_movement(base, base_cyclic)
-        success &= example_cartesian_action_movement1(base, base_cyclic)
-        #success &= example_angular_action_movement(base,q)
+        # success &= cartesian_action_movement(base, base_cyclic)
+        # #success &= angular_action_movement(base,q)
+        # pose = base.GetMeasuredCartesianPose()
+        # success &= move(base, base_cyclic, pose, 0.1, 0.1, 0.1)
         print(get_angles_pose(base))
         print(base.GetMeasuredCartesianPose())
-        # print(base.GetMeasuredJointAngles())
- 
 
-        # You can also refer to the 110-Waypoints examples if you want to execute
-        # a trajectory defined by a series of waypoints in joint space or in Cartesian space
 
         return 0 if success else 1
 

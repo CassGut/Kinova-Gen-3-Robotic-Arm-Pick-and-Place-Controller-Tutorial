@@ -1,3 +1,7 @@
+# Sugiharas method used for inverse kinematics calculation
+# uncomment line 69 to 86 and 93 to 96 to run sperately, recomment to run the stats file  
+# inputs are initial angles guess, desired transformation matrix, max iterations and lamda value(see tutorial)
+# outputs the converged angles for the desired transformation matrix 
 import numpy as np
 from QuadraticError import QuadraticError
 from fk import fk
@@ -82,16 +86,12 @@ def SM(q_initial, target_pose, max_iterations, lm):
         # plt.show()
     else:
         print('Did not Converge')
+        iteration = []
+        q = []
     return converged, np.rad2deg(q), iteration
 
-    
-
 # angles1 = angle_guess()
-# # T1 = pose_guess()
-# T1 = np.array([[0, 1, 0, -0.4],
-#                [1, 0, 0, -0.3],
-#                [0, 0, -1,  0.17],
-#                [0, 0,  0,  1]])
+#  T1 = pose_guess()
 # a,b,c = SM(angles1,T1,200,0.028773368)
 # print(b)
 

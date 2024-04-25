@@ -1,3 +1,4 @@
+# takes a picture everytime spacebar is pressed 
 import cv2
 import numpy as np
 import datetime  # To generate unique filenames based on the current time

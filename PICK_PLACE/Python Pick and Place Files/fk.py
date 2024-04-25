@@ -1,3 +1,5 @@
+# this is the forward kinematics file, it inputs a set of 7 angles for the robot 
+# and outputs the respective tranformation matrix
 import numpy as np
 from T import T 
 from Rx import Rx

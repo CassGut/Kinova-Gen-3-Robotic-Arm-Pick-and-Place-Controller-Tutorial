@@ -1,3 +1,4 @@
+# this file runs the camera and takes pictures every time interval specified in line 34
 import cv2
 import numpy as np
 import datetime  # To generate unique filenames based on the current time

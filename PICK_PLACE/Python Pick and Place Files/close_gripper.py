@@ -1,3 +1,4 @@
+# this file closes the gripper to a certain width (changed in the main funtion)
 import time
 import sys
 import os
@@ -159,8 +160,6 @@ if __name__ == "__main__":
     args = utilities.parseConnectionArguments()
        
     with utilities.DeviceConnection.createTcpConnection(args) as router, utilities.DeviceConnection.createUdpConnection(args) as router_real_time:
-            #Setup connection and example class (ensure utilities and necessary imports are available)     
-         # gripper_position1 = 0.0535  # Example position, replace with desired input
-         gripper_position1 = 0.001  # Example position, replace with desired input
-         close_gripper(router, router_real_time, gripper_position1)
+         gripper_position = 0.001  # Example position, how much the gripper is open in meters 
+         close_gripper(router, router_real_time, gripper_position)
 

@@ -1,3 +1,7 @@
+# Wamplers method used for inverse kinematics calculation
+# uncomment line 73 to 90 and 97 to 99 to run sperately, recomment to run the stats file  
+# inputs are initial angles guess, desired transformation matrix, max iterations and lamda value(see tutorial)
+# outputs the converged angles for the desired transformation matrix
 import numpy as np
 from QuadraticError import QuadraticError
 from fk import fk
@@ -86,6 +90,8 @@ def WM(q_initial, target_pose, max_iterations, lm):
         # plt.show()
     else:
         print('Did not Converge')
+        iteration = []
+        q = []
     return converged, q, iteration
 
 # angles1= angle_guess()
