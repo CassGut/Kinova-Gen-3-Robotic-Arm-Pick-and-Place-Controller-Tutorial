@@ -34,6 +34,34 @@ Part 3: Design and Implimantation of the Pick and Place Controller (Completed)
 |6. Computer Vison Code                    | [Open in Google Colab](https://colab.research.google.com/drive/105GEpzdTqPD_siRIzO0QI_cWIa34ZFCE#scrollTo=JgZvMV2T1BLm)                      |
 |7. Kinova Gen 3 Robotic Arm Pick and Place Controller                                                             | [Open in Google Colab](https://colab.research.google.com/drive/17js2GgHRx1Ob-h4o0waocMZa_N1NmjOX#scrollTo=pKqHaWBx9Ogg)                      |
 
+## Acknowledgments
+
+We extend our sincerest gratitude to all those who contributed to the realization of our engineering capstone project, focused on the Design of a Pick and Place Controller for the Kinova Gen 3 Robotic Arm with an Educational Tutorial on Kinematics and Control. Without their support, this endeavor would not have been possible.
+First and foremost, we would like to express our heartfelt appreciation to the members of our team: <br>
+Abdullah Barat [https://www.linkedin.com/in/abdullah-al-barat/], <br>
+Cassandra Gut [https://www.linkedin.com/in/cassandra-gut/], <br>
+Cyril Justin [https://www.linkedin.com/in/cyril-justin/], <br>
+Daljot Gill [https://www.linkedin.com/in/daljot-gill-a598a9254/], <br>
+Loida Perez [https://www.linkedin.com/in/loida-perez/], and <br>
+Usama Rasheed [https://www.linkedin.com/in/usama-rasheed-8804bb5a/]. <br>
+<br>Their dedication, hard work, and expertise were instrumental in every aspect of this project.
+
+We are also deeply thankful for the invaluable support and guidance provided by our sponsor Dr. Bisheban and advisor Dr. Goldsmith. Their wisdom, mentorship, and encouragement throughout this journey significantly enriched our understanding and enhanced the quality of our work.<br>
+Furthermore, we are indebted to our capstone professor, Dr.Thekinen and Teaching Assistant Danyal Saqib, for their contributions and unwavering belief in our project empowered us to overcome challenges and achieve our goals.
+
+We would also like to acknowledge the Intelligent Dynamics and Control Lab at the University of Calgary [https://intelligentdynamicscontrollab.dreamhosters.com/], <br> 
+particularly for providing us with the necessary resources, facilities, and environment conducive to our research and development efforts.<br>
+
+Last but not least, we extend our gratitude to all those who supported us behind the scenes, including our families, friends, and colleagues, for their unwavering encouragement and understanding during this undertaking.
+Thank you to everyone who played a part in bringing this project to fruition. Your contributions have made a lasting impact, and we are immensely grateful for your support and collaboration.<br>
+
+Sincerely,
+
+Team Kinova<br>
+Team 23 - Mechanical Engineering Capstone Design Project 2024<br>
+Schulich School of Engineering<br>
+University of Calgary
+
 
 ## Synopsis
 
